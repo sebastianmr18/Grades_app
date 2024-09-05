@@ -35,6 +35,9 @@
             android:inputType="text"
             android:text="Nombre estudiante"
             android:textColor="#000000"
+            android:background="@drawable/edit_text_background"
+            android:drawableStart="@drawable/user_icon"
+            android:drawablePadding="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
@@ -50,6 +53,7 @@
             android:inputType="text"
             android:text="Nombre curso"
             android:textColor="#000000"
+            android:background="@drawable/edit_text_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextStudentName" />
@@ -62,9 +66,10 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="number|numberDecimal"
             android:text="Nota 1"
             android:textColor="#000000"
+            android:background="@drawable/edit_text_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextCourseName" />
@@ -77,12 +82,13 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
             android:ems="10"
-            android:inputType="number"
+            android:inputType="number|numberDecimal"
             android:text="Nota 2"
             android:textColor="#000000"
+            android:background="@drawable/edit_text_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextGrade1"  />
+            app:layout_constraintTop_toBottomOf="@+id/editTextGrade1" />
 
         <CheckBox
             android:id="@+id/checkBoxRepeater"
@@ -104,75 +110,25 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="20dp"
+            android:enabled="false"
             android:text="Calcular Nota"
-            android:textColor="#000000"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_background"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/checkBoxRepeater"  />
+            app:layout_constraintTop_toBottomOf="@+id/checkBoxRepeater" />
 
         <TextView
-            android:id="@+id/textViewStudentName"
+            android:id="@+id/textViewInformation"
             android:layout_width="340dp"
-            android:layout_height="20dp"
+            android:layout_height="100dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
-            android:text="Nombre: XXX"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/buttonCalculate"  />
 
-        <TextView
-            android:id="@+id/textViewCourseName"
-            android:layout_width="340dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:text="Curso: XXX"
-            android:textColor="#000000"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewStudentName"  />
-
-        <TextView
-            android:id="@+id/textViewGrade1"
-            android:layout_width="340dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:text="Nota1: XXX"
-            android:textColor="#000000"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewCourseName" />
-
-        <TextView
-            android:id="@+id/textViewGrade2"
-            android:layout_width="340dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:text="Nota2: XXX"
-            android:textColor="#000000"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewGrade1" />
-
-        <TextView
-            android:id="@+id/textViewFinalGrade"
-            android:layout_width="340dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:text="Nota Final: XXX"
-            android:textColor="#000000"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewGrade2"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
